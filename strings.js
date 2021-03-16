@@ -46,15 +46,18 @@ const stringLib = () => {
     function GenerateOnlyNumbers() {
         // Make a loop, and show only numbers, 0 to 9 and return that in a list
         //Ie: 0,1,2,3...9
+        //To be updated
     }
 
     function GenerateOnlySymbols() {
         //Ie: $, %, !, #, etc
+        //To be updated
     }
 
 
     function GenerateUpperAndLowerCase() {
         //Ie: A,B,C,D,E,F,G...Z and  a,b,c,d,e,f,g...z
+        //To be updated
     }
 
 }
