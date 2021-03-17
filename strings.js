@@ -4,6 +4,7 @@ const stringLib = () => {
 
     function StrformatCheck() {
         // to be added and called in each function
+
     }
 
     function concatenate(a, b) {
@@ -13,11 +14,15 @@ const stringLib = () => {
 
     function ASCIINumberToChar(Number) {
         // take one number, say, 127 and convert it to its ASCII char representation
-        return String.fromCharCode(Number);
+        if (Number >= 32 || Number <= 127) {
+            return String.fromCharCode(Number)
+        } else {
+            console.error("Enter ASCII Number between 32 to 127");
+        }
     }
 
     function CharToAsciiNumber(aChar) {
-        // take one Character, say, 'A' and convert it to it's Number representation
+        // take one Character, say, 'A' and convert it to it's ASCILL Number representation
         return aChar.charCodeAt(0); //first letter specified
     }
 
@@ -46,18 +51,20 @@ const stringLib = () => {
     function GenerateOnlyNumbers() {
         // Make a loop, and show only numbers, 0 to 9 and return that in a list
         //Ie: 0,1,2,3...9
-        //To be updated
+        return GenerateOnlySymbols(48, 57);
     }
 
-    function GenerateOnlySymbols() {
+    function GenerateOnlySymbols(start, end) {
         //Ie: $, %, !, #, etc
-        //To be updated
+        let symbolList = [];
+        for (let i = start; start < end; i++) {
+            symbolList.push(String.fromCharCode(i))
+        }
+        return symbolList;
     }
-
 
     function GenerateUpperAndLowerCase() {
         //Ie: A,B,C,D,E,F,G...Z and  a,b,c,d,e,f,g...z
-        //To be updated
+        return GenerateOnlySymbols(65, 90), GenerateOnlySymbols(97, 122);
     }
-
 }
